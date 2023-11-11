@@ -1,7 +1,8 @@
 # CalculaPY
 
-Este repositório contém uma *calculadora feita em python*.
-Idea surgiu no estágio 
+- Este repositório contém uma *calculadora feita em python*.
+
+- Idea surgiu no estágio
 
 ## Objetivo
 
