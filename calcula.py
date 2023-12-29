@@ -61,7 +61,7 @@ while True:
     idade = int(input(f"Qual é a sua idade, {nome}? \n"))
 
     ## Para Crianças: ##
-    # idade >= 1 and idade <= 10
+    # idade >= 0 and idade <= 12
     if 0 <= idade <= 12:
         op_tutorial = str(input("Você quer passar pelo Tutorial?\n" "Sim | Não\n"))
         if op_tutorial == "Sim" or op_tutorial == "sim":
