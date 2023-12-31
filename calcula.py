@@ -51,6 +51,26 @@ def exponenciacao():
     print(f"A expoenciação entre o 1° número {num1} e 2° número {num2} = {num1**num2}")
 
 
+def bhaskara():
+    print("Você escolheu a opção Cálculo de Bhaskara/Função do 2° Grau")
+    a = float(input("Digite o coeficiente 'a': "))
+    b = float(input("Digite o coeficiente 'b': "))
+    c = float(input("Digite o coeficiente 'c': "))
+    delta = b**2 - 4 * a * c
+    print(
+        f"O coeficiente 'a' é {a}, coeficiente 'b' é {b} , coeficiente 'c' é {c} e o delta é {delta}"
+    )
+    if delta > 0:
+        x1 = (-b + (delta**0.5)) / (2 * a)
+        x2 = (-b - (delta**0.5)) / (2 * a)
+        print(f"As raízes da equação são: x1 = {x1}, x2 = {x2}")
+    elif delta == 0:
+        x = -b / (2 * a)
+        print(f"A equação possui uma raiz dupla: x = {x}")
+    else:
+        print("A equação não possui raízes reais.")
+
+
 while True:
     print("|______________________|")
     print("|_______CalculaPy______|")
@@ -142,7 +162,8 @@ while True:
             "Subtração(-),\n"
             "Multiplicação(*),\n"
             "Divisão(/),\n"
-            "Exponenciação(**)"
+            "Exponenciação(**),\n"
+            "Função do 2° Grau(Delta)"
         )
         op = str(input("Digite a operação que você escolheu: "))
         if op == "Soma" or op == "+":
@@ -157,6 +178,8 @@ while True:
             divisao()
         elif op == "Exponenciação" or op == "**":
             exponenciacao()
+        elif op == "Função do 2° Grau" or op == "Delta":
+            bhaskara()
         else:
             print("Opção Incorreta")
 
