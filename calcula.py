@@ -71,6 +71,13 @@ def bhaskara():
         print("A equação não possui raízes reais.")
 
 
+def raiz_quadrada():
+    print("Você escolheu a opção da Raiz Quadrada")
+    num_raiz = int(input("Digite o número para  calcularmos a raiz: "))
+    raiz_quadrada = num_raiz**0.5
+    print(f"A raiz quadrada {num_raiz} é {round(raiz_quadrada,2)}")
+
+
 while True:
     print("|______________________|")
     print("|_______CalculaPy______|")
@@ -152,7 +159,8 @@ while True:
                 break
             else:
                 print("Opção Incorreta")
-    elif idade >= 13:
+    # idade >= 13 AND idade <=100
+    elif 13 <= idade <= 100:
         ## Para Adultos ##
         print(f"Seja Bem-Vindo: {nome} 🎉 ao CalculaPy")
         print(
@@ -163,7 +171,8 @@ while True:
             "Multiplicação(*),\n"
             "Divisão(/),\n"
             "Exponenciação(**),\n"
-            "Função do 2° Grau(Delta)"
+            "Função do 2° Grau(Delta)\n"
+            "Raiz Quadrada(%)"
         )
         op = str(input("Digite a operação que você escolheu: "))
         if op == "Soma" or op == "+":
@@ -180,8 +189,9 @@ while True:
             exponenciacao()
         elif op == "Função do 2° Grau" or op == "Delta":
             bhaskara()
+        elif op == "Raiz Quadrada" or op == "%":
+            raiz_quadrada()
         else:
             print("Opção Incorreta")
-
     else:
         print("Resposta inválida. Por favor, responda valores reais")
