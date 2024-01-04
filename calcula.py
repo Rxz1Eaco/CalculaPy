@@ -78,6 +78,19 @@ def raiz_quadrada():
     print(f"A raiz quadrada {num_raiz} é {round(raiz_quadrada,2)}")
 
 
+def logaritmo():
+    print("Você escolheu a opção da Logaritmo")
+    b = int(input("Digite o logaritmando 'b': "))
+    a = int(input("Digite a base 'a': "))
+
+    log = 0
+    while b >= a:
+        b /= a
+        log += 1
+
+    print(f"O logaritmo de {b} de {b} é: {log}")
+
+
 while True:
     print("|______________________|")
     print("|_______CalculaPy______|")
@@ -172,7 +185,8 @@ while True:
             "Divisão(/),\n"
             "Exponenciação(**),\n"
             "Função do 2° Grau(Delta)\n"
-            "Raiz Quadrada(%)"
+            "Raiz Quadrada(%)\n"
+            "Logaritmo(Log)"
         )
         op = str(input("Digite a operação que você escolheu: "))
         if op == "Soma" or op == "+":
@@ -191,6 +205,8 @@ while True:
             bhaskara()
         elif op == "Raiz Quadrada" or op == "%":
             raiz_quadrada()
+        elif op == "Logaritmo" or op == "Log":
+            logaritmo()
         else:
             print("Opção Incorreta")
     else:
