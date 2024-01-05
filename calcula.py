@@ -84,11 +84,14 @@ def logaritmo():
     a = int(input("Digite a base 'a': "))
 
     log = 0
+    original_b = b
     while b >= a:
         b /= a
         log += 1
 
-    print(f"O logaritmo de {b} de {b} é: {log}")
+    resultado_logaritmo = log + b / a
+
+    print(f"O logaritmo de {original_b} na base {a} é: {resultado_logaritmo}")
 
 
 while True:
