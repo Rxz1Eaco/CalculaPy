@@ -22,6 +22,12 @@ def multiplicacao():
     multiplicacao = num1*num2
     print(f'A multiplicação entre número {num1} e o número {num2} é {multiplicacao}')
 
+def exponenciacao():
+    num1 = int(input('Digite o primeiro número: '))
+    num2 = int(input('Digite o segundo número: '))
+    exponencicao = num1**num2
+    print(f'A exponenciação entre número {num1} e o número {num2} é {exponencicao}')
+
 nome = str(input('Qual é o seu nome : '))
 print(f'Seja bem-vindo {nome}')
 print(f'{nome}, preciso que você escolha uma dessas operações: Soma, Subtração, Divisão, Multiplicação, Exponenciação')
@@ -36,6 +42,9 @@ elif op == 'Subtração':
 
 elif op == 'Divisão':
     divisao()
+
+elif op == 'Exponenciação':
+    exponenciacao()
 
 
 else:
